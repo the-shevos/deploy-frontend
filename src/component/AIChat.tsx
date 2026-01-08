@@ -172,7 +172,7 @@ export default function AIChatbot() {
     setIsTyping(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/v1/ai/ask", {
+      const response = await fetch("https://deploy-backend-production-f769.up.railway.app/api/v1/ai/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: userMessage.text }),

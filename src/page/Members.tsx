@@ -42,7 +42,7 @@ const Members = () => {
   const loadMembers = async () => {
     try {
       const emailRes = await axios.get<{ users: EmailUser[] }>(
-        "http://localhost:3000/api/v1/user/verified-users"
+        "https://deploy-backend-production-f769.up.railway.app/api/v1/user/verified-users"
       );
       const emailUsers: Member[] = emailRes.data.users.map((u) => ({
         id: u._id,
@@ -55,7 +55,7 @@ const Members = () => {
       }));
 
       const googleRes = await axios.get<{ users: GoogleUser[] }>(
-        "http://localhost:3000/api/get-google-users"
+        "https://deploy-backend-production-f769.up.railway.app/api/get-google-users"
       );
       const googleUsers: Member[] = googleRes.data.users.map((u) => ({
         id: u.id,
@@ -130,13 +130,13 @@ const Members = () => {
                   try {
                     if (member.provider === "Email & Password") {
                       await axios.patch(
-                        `http://localhost:3000/api/v1/user/${
+                        `https://deploy-backend-production-f769.up.railway.app/api/v1/user/${
                           member.isBlocked ? "unblock-user" : "block-user"
                         }/${member.id}`
                       );
                     } else {
                       await axios.patch(
-                        `http://localhost:3000/api/${
+                        `https://deploy-backend-production-f769.up.railway.app/api/${
                           member.isBlocked ? "unblock" : "block"
                         }/${member.id}`
                       );

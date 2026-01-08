@@ -22,7 +22,7 @@ const Support = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get<ContactCard[]>(
-          "http://localhost:3000/api/v1/contact"
+          "https://deploy-backend-production-f769.up.railway.app/api/v1/contact"
         );
         setCardsData(response.data);
       } catch {
@@ -46,7 +46,7 @@ const Support = () => {
 
     try {
       await axios.post(
-        `http://localhost:3000/api/v1/contact/reply/${card._id}`,
+        `https://deploy-backend-production-f769.up.railway.app/api/v1/contact/reply/${card._id}`,
         { message: replyMessage }
       );
 

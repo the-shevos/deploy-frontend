@@ -80,7 +80,7 @@ export default function LoginForm({
     }
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/user/forgot-password",
+        "https://deploy-backend-production-f769.up.railway.app/api/v1/user/forgot-password",
         { userName: formData.userName }
       );
       toast.success(
@@ -95,7 +95,7 @@ export default function LoginForm({
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/user/login",
+        "https://deploy-backend-production-f769.up.railway.app/api/v1/user/login",
         {
           userName: formData.userName,
           userPassword: formData.userPassword,

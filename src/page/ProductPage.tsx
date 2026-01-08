@@ -52,7 +52,7 @@ const ProductPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/products");
+      const res = await axios.get("https://deploy-backend-production-f769.up.railway.app/api/v1/products");
       setProducts(res.data);
     } catch (err) {
       console.error(err);
@@ -124,7 +124,7 @@ const ProductPage = () => {
                   toast.dismiss(t.id);
                   try {
                     await axios.delete(
-                      `http://localhost:3000/api/v1/products/${product._id}`,
+                      `https://deploy-backend-production-f769.up.railway.app/api/v1/products/${product._id}`,
                       { headers: { Authorization: `Bearer ${token}` } }
                     );
 
@@ -205,7 +205,7 @@ const ProductPage = () => {
     try {
       if (editingProductId) {
         await axios.put(
-          `http://localhost:3000/api/v1/products/${editingProductId}`,
+          `https://deploy-backend-production-f769.up.railway.app/api/v1/products/${editingProductId}`,
           data,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -219,7 +219,7 @@ const ProductPage = () => {
           },
         });
       } else {
-        await axios.post("http://localhost:3000/api/v1/products", data, {
+        await axios.post("https://deploy-backend-production-f769.up.railway.app/api/v1/products", data, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success("Product added successfully", {

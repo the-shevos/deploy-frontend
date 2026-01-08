@@ -102,7 +102,7 @@ export default function ProductPage() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get<Product[]>(
-          "http://localhost:3000/api/v1/products"
+          "https://deploy-backend-production-f769.up.railway.app/api/v1/products"
         );
         const inStockProducts = res.data.filter((p) => p.stock > 0);
         setProducts(inStockProducts);

@@ -57,7 +57,7 @@ const DashboardHome = () => {
 
   const fetchLatestOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/orders/latest");
+      const res = await axios.get("https://deploy-backend-production-f769.up.railway.app/api/v1/orders/latest");
       const orders = res.data;
       setLatestOrders(orders);
       const startDate = new Date();
@@ -97,7 +97,7 @@ const DashboardHome = () => {
   };
 
   const loadContacts = async () => {
-    const res = await axios.get("http://localhost:3000/api/v1/contact/limit");
+    const res = await axios.get("https://deploy-backend-production-f769.up.railway.app/api/v1/contact/limit");
     setContacts(res.data);
   };
 

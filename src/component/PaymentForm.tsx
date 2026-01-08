@@ -59,7 +59,7 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
         },
       };
 
-      const res = await fetch("http://localhost:3000/api/v1/orders", {
+      const res = await fetch("https://deploy-backend-production-f769.up.railway.app/api/v1/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

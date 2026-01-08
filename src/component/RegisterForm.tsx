@@ -46,7 +46,7 @@ export default function RegisterForm({ onSignInClick }: RegisterFormProps) {
     typingTimeoutRef.current = setTimeout(async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/v1/user/check-username?userName=${formData.userName}`
+          `https://deploy-backend-production-f769.up.railway.app/api/v1/user/check-username?userName=${formData.userName}`
         );
         setUniqueValidation((prev) => ({
           ...prev,
@@ -64,7 +64,7 @@ export default function RegisterForm({ onSignInClick }: RegisterFormProps) {
     typingTimeoutRef.current = setTimeout(async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/v1/user/check-email?userEmail=${formData.userEmail}`
+          `https://deploy-backend-production-f769.up.railway.app/api/v1/user/check-email?userEmail=${formData.userEmail}`
         );
         setUniqueValidation((prev) => ({
           ...prev,
@@ -118,7 +118,7 @@ export default function RegisterForm({ onSignInClick }: RegisterFormProps) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/v1/user/register", {
+      await axios.post("https://deploy-backend-production-f769.up.railway.app/api/v1/user/register", {
         userName: formData.userName,
         userEmail: formData.userEmail,
         userPassword: formData.userPassword,

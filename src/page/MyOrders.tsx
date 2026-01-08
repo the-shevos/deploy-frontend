@@ -27,7 +27,7 @@ export default function MyOrders() {
 
   useEffect(() => {
     if (!user?._id) return;
-    fetch(`http://localhost:3000/api/v1/orders/user/${user._id}`)
+    fetch(`https://deploy-backend-production-f769.up.railway.app/api/v1/orders/user/${user._id}`)
       .then((res) => res.json())
       .then((data) => setOrders(data))
       .catch((err) => console.error(err));

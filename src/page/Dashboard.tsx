@@ -97,7 +97,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchContactCount = async () => {
       const res = await axios.get(
-        "http://localhost:3000/api/v1/contact/new-count"
+        "https://deploy-backend-production-f769.up.railway.app/api/v1/contact/new-count"
       );
       setNewContactCount(res.data.count);
     };
@@ -110,7 +110,7 @@ const Dashboard = () => {
   useEffect(() => {
     const markAllRead = async () => {
       try {
-        await axios.post("http://localhost:3000/api/v1/contact/read-all");
+        await axios.post("https://deploy-backend-production-f769.up.railway.app/api/v1/contact/read-all");
         setNewContactCount(0);
       } catch (err) {
         console.error(err);
@@ -168,7 +168,7 @@ const Dashboard = () => {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const res = await axios.get("http://localhost:3000/api/v1/admin/me", {
+        const res = await axios.get("https://deploy-backend-production-f769.up.railway.app/api/v1/admin/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -189,7 +189,7 @@ const Dashboard = () => {
   const generateOrdersReport = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:3000/api/v1/orders", {
+      const res = await axios.get("https://deploy-backend-production-f769.up.railway.app/api/v1/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -265,13 +265,13 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
 
       const emailRes = await axios.get(
-        "http://localhost:3000/api/v1/user/verified-users",
+        "https://deploy-backend-production-f769.up.railway.app/api/v1/user/verified-users",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
       const googleRes = await axios.get(
-        "http://localhost:3000/api/get-google-users",
+        "https://deploy-backend-production-f769.up.railway.app/api/get-google-users",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -338,7 +338,7 @@ const Dashboard = () => {
   const generateProductsReport = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:3000/api/v1/products", {
+      const res = await axios.get("https://deploy-backend-production-f769.up.railway.app/api/v1/products", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -834,7 +834,7 @@ const Dashboard = () => {
                     }
 
                     const res = await axios.put(
-                      `http://localhost:3000/api/v1/admin/update-profile/${admin._id}`,
+                      `https://deploy-backend-production-f769.up.railway.app/api/v1/admin/update-profile/${admin._id}`,
                       formDataObj,
                       {
                         headers: {

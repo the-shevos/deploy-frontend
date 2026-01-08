@@ -19,7 +19,7 @@ export default function UltraPremiumShowcase() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get<Product[]>(
-          "http://localhost:3000/api/v1/products"
+          "https://deploy-backend-production-f769.up.railway.app/api/v1/products"
         );
         setProducts(res.data);
       } catch (e) {

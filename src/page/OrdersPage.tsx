@@ -44,7 +44,7 @@ const OrdersPage = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/orders", {
+      const res = await axios.get("https://deploy-backend-production-f769.up.railway.app/api/v1/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setOrders(res.data);
@@ -69,7 +69,7 @@ const OrdersPage = () => {
   const updateStatus = async (orderId: string, status: string) => {
     try {
       await axios.put(
-        `http://localhost:3000/api/v1/orders/${orderId}/status`,
+        `https://deploy-backend-production-f769.up.railway.app/api/v1/orders/${orderId}/status`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );
