@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 import { FaUserSlash, FaUserCheck } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
@@ -223,7 +223,7 @@ const Members = () => {
             }}
             className={`px-5 py-2 rounded-full cursor-pointer font-medium transition-all duration-200 ${
               filter === f
-                ? "bg-gradient-to-r from-purple-600 to-purple-500 text-white shadow-lg"
+                ? "bg-linear-to-r from-purple-600 to-purple-500 text-white shadow-lg"
                 : "bg-gray-300/70 text-gray-700 hover:bg-gray-300"
             }`}
           >

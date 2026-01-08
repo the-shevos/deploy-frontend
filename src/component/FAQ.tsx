@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { FaRobot, FaCreditCard, FaPaintBrush, FaTruck } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -64,7 +64,7 @@ const FaqSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-white via-purple-50 to-pink-100 w-full min-h-screen">
+    <section className="bg-linear-to-br from-white via-purple-50 to-pink-100 w-full min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-12 md:py-24 pb-24 relative">
         <div className="text-center mb-12">
           <h2
@@ -84,7 +84,7 @@ const FaqSection = () => {
         </div>
 
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-12">
-          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[1px] bg-purple-300 transform -translate-x-1/2"></div>
+          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[px] bg-purple-300 transform -translate-x-1/2"></div>
 
           <div className="space-y-8 w-full text-center md:text-left md:pr-6 md:ml-auto md:max-w-[500px]">
             {faqsLeft.map((faq, index) => (
@@ -94,7 +94,7 @@ const FaqSection = () => {
                 data-aos="zoom-in"
                 data-aos-delay={faq.delay}
               >
-                <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-purple-200 text-purple-500 rounded-full flex items-center justify-center">
+                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 bg-purple-200 text-purple-500 rounded-full flex items-center justify-center">
                   {faq.icon}
                 </div>
                 <div>
@@ -117,7 +117,7 @@ const FaqSection = () => {
                 data-aos="zoom-in"
                 data-aos-delay={faq.delay}
               >
-                <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-purple-200 text-purple-500 rounded-full flex items-center justify-center">
+                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 bg-purple-200 text-purple-500 rounded-full flex items-center justify-center">
                   {faq.icon}
                 </div>
                 <div>
@@ -134,7 +134,7 @@ const FaqSection = () => {
         </div>
 
         <div className="text-center mt-12 px-4">
-          <p className="bg-[#f1e6fa] faq-text inline-block px-6 py-3 rounded-full text-gray-700 text-md md:text-md border border-zinc-200 shadow-lg max-w-full break-words">
+          <p className="bg-[#f1e6fa] faq-text inline-block px-6 py-3 rounded-full text-gray-700 text-md md:text-md border border-zinc-200 shadow-lg max-w-full wrap-break-word">
             Didn’t find the answer you’re looking for?
             <Link
               to="/contact"

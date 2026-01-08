@@ -42,9 +42,9 @@ export default function MyOrders() {
   }
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-br from-white via-purple-100 to-pink-100">
+    <div className="min-h-screen relative bg-linear-to-br from-white via-purple-100 to-pink-100">
       <div
-        className="inline-flex items-center gap-2 mt-4 ml-5 px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer mb-8"
+        className="inline-flex items-center gap-2 mt-4 ml-5 px-4 py-2 bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer mb-8"
         onClick={() => navigate("/")}
       >
         <Home size={22} />

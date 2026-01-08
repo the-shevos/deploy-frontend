@@ -2,6 +2,12 @@ import React, { useState, forwardRef, useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
+export interface PasswordValidation {
+  minLength: boolean;
+  alphanumeric: boolean;
+  specialChar: boolean;
+}
+
 interface PasswordFieldProps {
   label: string;
   name: string;
@@ -11,10 +17,23 @@ interface PasswordFieldProps {
   onBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
   focused: boolean;
   error?: boolean;
+  validation?: PasswordValidation;
 }
 
 const PasswordField = forwardRef<HTMLInputElement, PasswordFieldProps>(
-  ({ label, name, value, onChange, onFocus, onBlur, focused, error }, ref) => {
+  (
+    {
+      label,
+      name,
+      value,
+      onChange,
+      onFocus,
+      onBlur,
+      focused = false,
+      error,
+    },
+    ref
+  ) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const strength = useMemo(() => {

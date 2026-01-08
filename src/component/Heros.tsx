@@ -1,13 +1,12 @@
-import React from "react";
 import { Sparkles, ShoppingBag } from "lucide-react";
 import FashionHeader from "./Navbar";
 
 export default function FashionHomepage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-white to-pink-100">
+    <div className="min-h-screen bg-linear-to-br from-purple-100 via-white to-pink-100">
       <FashionHeader />
 
-      <div className="mx-4 md:mx-9 mt-2 md:mt-2 rounded-3xl bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden">
+      <div className="mx-4 md:mx-9 mt-2 md:mt-2 rounded-3xl bg-linear-to-r from-gray-900 to-gray-800 overflow-hidden">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 md:px-16 py-10 sm:py-12 md:py-14 text-center lg:text-left">
           <div className="flex-1 mb-6 lg:mb-0 lg:translate-x-6">
             <div className="inline-flex items-center justify-center lg:justify-start gap-2 bg-purple-600/20 text-purple-400 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
@@ -15,7 +14,7 @@ export default function FashionHomepage() {
               LIVE FOR FASHION
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Elevate Your Fashion Up Look
             </h1>
 

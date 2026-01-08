@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaBoxOpen, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import toast from "react-hot-toast";
@@ -12,7 +12,7 @@ interface Product {
 }
 
 interface OrderItem {
-  product: Product | null; // product can be null
+  product: Product | null;
   quantity: number;
   price: number;
 }
@@ -147,7 +147,9 @@ const OrdersPage = () => {
             </p>
             <p className="text-gray-500 mb-2 text-sm">
               <span className="font-medium">Items:</span>{" "}
-              {order.items.map((i) => i.product.name).join(", ")}
+              {order.items
+                .map((i) => (i.product ? i.product.name : "Unknown Product"))
+                .join(", ")}{" "}
             </p>
             <p className="text-gray-400 text-xs">
               Created: {new Date(order.createdAt).toLocaleDateString()}
@@ -196,7 +198,9 @@ const OrdersPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-gray-700">
               <p>
                 <span className="font-semibold">User:</span>{" "}
-                {selectedOrder.user}
+                {typeof selectedOrder.user === "string"
+                  ? selectedOrder.user
+                  : selectedOrder.user?.name ?? "Unknown"}{" "}
               </p>
               <p>
                 <span className="font-semibold">Payment:</span>{" "}
@@ -248,10 +252,10 @@ const OrdersPage = () => {
                   key={idx}
                   className="bg-gray-200/80 rounded-2xl shadow hover:shadow-md p-4 flex items-center gap-4 transition transform hover:scale-[1.02]"
                 >
-                  {item.product.images[0] ? (
+                  {item.product?.images && item.product.images.length > 0 ? (
                     <img
                       src={item.product.images[0]}
-                      alt={item.product.name}
+                      alt={item.product.name ?? "Product"}
                       className="w-20 h-20 object-cover rounded-lg border border-gray-200"
                     />
                   ) : (
@@ -259,9 +263,10 @@ const OrdersPage = () => {
                       No Image
                     </div>
                   )}
+
                   <div className="flex flex-col flex-1">
                     <h4 className="font-semibold text-gray-800">
-                      {item.product.name}
+                      {item.product?.name ?? "Unknown Product"}
                     </h4>
                     <p className="text-gray-600">Quantity: {item.quantity}</p>
                     <p className="text-gray-600">Price: ${item.price}</p>
@@ -274,7 +279,7 @@ const OrdersPage = () => {
               {selectedOrder.status === "pending" && (
                 <>
                   <button
-                    className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 rounded-2xl hover:from-blue-600 hover:to-blue-700 transition transform hover:scale-[1.02]"
+                    className="flex-1 bg-linear-to-r from-blue-500 to-blue-600 text-white py-2 rounded-2xl hover:from-blue-600 hover:to-blue-700 transition transform hover:scale-[1.02]"
                     onClick={() =>
                       updateStatus(selectedOrder._id, "in-progress")
                     }
@@ -282,7 +287,7 @@ const OrdersPage = () => {
                     Start Progress
                   </button>
                   <button
-                    className="flex-1 bg-gradient-to-r from-red-500 to-red-600 text-white py-2 rounded-2xl hover:from-red-600 hover:to-red-700 transition transform hover:scale-[1.02]"
+                    className="flex-1 bg-linear-to-r from-red-500 to-red-600 text-white py-2 rounded-2xl hover:from-red-600 hover:to-red-700 transition transform hover:scale-[1.02]"
                     onClick={() => updateStatus(selectedOrder._id, "cancelled")}
                   >
                     Cancel
@@ -292,13 +297,13 @@ const OrdersPage = () => {
               {selectedOrder.status === "in-progress" && (
                 <>
                   <button
-                    className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-2 rounded-2xl hover:from-green-600 hover:to-green-700 transition transform hover:scale-[1.02]"
+                    className="flex-1 bg-linear-to-r from-green-500 to-green-600 text-white py-2 rounded-2xl hover:from-green-600 hover:to-green-700 transition transform hover:scale-[1.02]"
                     onClick={() => updateStatus(selectedOrder._id, "completed")}
                   >
                     Complete
                   </button>
                   <button
-                    className="flex-1 bg-gradient-to-r from-red-500 to-red-600 text-white py-2 rounded-2xl hover:from-red-600 hover:to-red-700 transition transform hover:scale-[1.02]"
+                    className="flex-1 bg-linear-to-r from-red-500 to-red-600 text-white py-2 rounded-2xl hover:from-red-600 hover:to-red-700 transition transform hover:scale-[1.02]"
                     onClick={() => updateStatus(selectedOrder._id, "cancelled")}
                   >
                     Cancel

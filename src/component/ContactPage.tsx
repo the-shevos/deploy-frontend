@@ -96,7 +96,7 @@ const ContactPage = () => {
             className="bg-white/30 backdrop-blur-lg rounded-2xl p-6 sm:p-8 lg:p-10 border border-gray-300 shadow-lg h-auto"
             data-aos="fade-right"
           >
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-3 bg-gradient-to-r from-indigo-400 via-purple-700 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-3 bg-linear-to-r from-indigo-400 via-purple-700 to-pink-400 bg-clip-text text-transparent">
               Message With Us
             </h2>
             <p className="text-slate-700 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed font-montserrat">

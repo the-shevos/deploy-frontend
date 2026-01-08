@@ -86,12 +86,8 @@ export default function LoginForm({
       toast.success(
         response.data.message || "Password reset link sent to your email!"
       );
-    } catch (error: any) {
-      const msg =
-        error.response?.data?.message ||
-        error.response?.data?.error ||
-        "Failed to send reset link!";
-      toast.error(msg);
+    } catch (e) {
+      console.log(e);
     }
   };
 
@@ -156,7 +152,7 @@ export default function LoginForm({
         }}
       />
 
-      <h1 className="text-3xl font-extrabold mb-6 text-center bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+      <h1 className="text-3xl font-extrabold mb-6 text-center bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
         Good to see you again!
       </h1>
 
@@ -218,7 +214,7 @@ export default function LoginForm({
           disabled={!isFormValid()}
           className={`w-full mt-3 py-2 rounded-lg font-semibold transition-colors ${
             isFormValid()
-              ? "bg-gradient-to-l from-blue-500 to-purple-600 text-white hover:opacity-90"
+              ? "bg-linear-to-l from-blue-500 to-purple-600 text-white hover:opacity-90"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >

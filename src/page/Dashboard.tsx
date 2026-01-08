@@ -416,7 +416,7 @@ const Dashboard = () => {
             to="/dashboard"
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
               isActive("/dashboard")
-                ? "bg-gradient-to-br from-purple-600 to-indigo-500 text-white shadow"
+                ? "bg-linear-to-br from-purple-600 to-indigo-500 text-white shadow"
                 : "text-gray-700 hover:bg-purple-100 hover:text-purple-700"
             }`}
           >
@@ -438,7 +438,7 @@ const Dashboard = () => {
             to="products"
             className={`flex items-center gap-3 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
               isActive("/dashboard/products")
-                ? "bg-gradient-to-br from-purple-600 to-indigo-500 text-white shadow"
+                ? "bg-linear-to-br from-purple-600 to-indigo-500 text-white shadow"
                 : "text-gray-700 hover:bg-purple-100 hover:text-purple-700"
             }`}
           >
@@ -462,7 +462,7 @@ const Dashboard = () => {
             to="orders"
             className={`flex items-center gap-3 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
               isActive("/dashboard/orders")
-                ? "bg-gradient-to-br from-purple-600 to-indigo-500 text-white shadow"
+                ? "bg-linear-to-br from-purple-600 to-indigo-500 text-white shadow"
                 : "text-gray-700 hover:bg-purple-100 hover:text-purple-700"
             }`}
           >
@@ -486,7 +486,7 @@ const Dashboard = () => {
             to="support"
             className={`relative flex items-center gap-3 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
               isActive("/dashboard/support")
-                ? "bg-gradient-to-br from-purple-600 to-indigo-500 text-white shadow"
+                ? "bg-linear-to-br from-purple-600 to-indigo-500 text-white shadow"
                 : "text-gray-700 hover:bg-purple-100 hover:text-purple-700"
             }`}
             onClick={() => setNewContactCount(0)}
@@ -516,7 +516,7 @@ const Dashboard = () => {
             to="members"
             className={`flex items-center gap-3 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
               isActive("/dashboard/members")
-                ? "bg-gradient-to-br from-purple-600 to-indigo-500 text-white shadow"
+                ? "bg-linear-to-br from-purple-600 to-indigo-500 text-white shadow"
                 : "text-gray-700 hover:bg-purple-100 hover:text-purple-700"
             }`}
           >
@@ -553,7 +553,7 @@ const Dashboard = () => {
         </div>
       </aside>
 
-      <main className="flex-1 ml-[17rem] p-6 space-y-4 overflow-auto">
+      <main className="flex-1 ml-17rem p-6 space-y-4 overflow-auto">
         <div className="flex items-center gap-6 max-w-7xl mx-auto px-4 py-3">
           <div className="w-[520px] bg-white rounded-full px-5 py-3 flex items-center gap-3 border border-gray-300 focus-within:ring-2 focus-within:ring-indigo-500 transition-all duration-300 shadow-md hover:shadow-lg">
             <FontAwesomeIcon
@@ -583,7 +583,7 @@ const Dashboard = () => {
             </div>
 
             <div className="relative group">
-              <button className="flex items-center px-5 py-3 rounded-full text-sm font-semibold bg-gradient-to-br from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 transform ">
+              <button className="flex items-center px-5 py-3 rounded-full text-sm font-semibold bg-linear-to-br from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 transform ">
                 <FontAwesomeIcon icon={faChartPie} className="mr-2" />
                 Reports
                 <FontAwesomeIcon
@@ -596,7 +596,7 @@ const Dashboard = () => {
                 <a
                   href="#"
                   onClick={generateMembersReport}
-                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-white/60 backdrop-blur-sm rounded-t-xl shadow-sm hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:text-gray-900 transition-all duration-300 "
+                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-white/60 backdrop-blur-sm rounded-t-xl shadow-sm hover:bg-linear-to-r hover:from-purple-50 hover:to-indigo-50 hover:text-gray-900 transition-all duration-300 "
                 >
                   <FontAwesomeIcon
                     icon={faChartSimple}
@@ -608,7 +608,7 @@ const Dashboard = () => {
                 <a
                   href="#"
                   onClick={generateOrdersReport}
-                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-gradient-to-r hover:from-green-50 hover:to-teal-50 hover:text-gray-900 transition-all duration-300 "
+                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-linear-to-r hover:from-green-50 hover:to-teal-50 hover:text-gray-900 transition-all duration-300 "
                 >
                   <FontAwesomeIcon
                     icon={faChartLine}
@@ -620,7 +620,7 @@ const Dashboard = () => {
                 <a
                   href="#"
                   onClick={generateProductsReport}
-                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-white/60 backdrop-blur-sm rounded-b-xl shadow-sm hover:bg-gradient-to-r hover:from-yellow-50 hover:to-orange-50 hover:text-gray-900 transition-all duration-300 "
+                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-white/60 backdrop-blur-sm rounded-b-xl shadow-sm hover:bg-linear-to-r hover:from-yellow-50 hover:to-orange-50 hover:text-gray-900 transition-all duration-300 "
                 >
                   <FontAwesomeIcon icon={faStar} className="text-yellow-500" />
                   Product Report
@@ -735,7 +735,7 @@ const Dashboard = () => {
             </div>
 
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              <h2 className="text-3xl font-bold bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
                 Update Profile
               </h2>
               <p className="text-slate-500 text-sm">
@@ -803,7 +803,7 @@ const Dashboard = () => {
               </button>
 
               <button
-                className="px-6 py-3 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:shadow-lg hover:scale-[1.02] transition-all duration-200 shadow-md"
+                className="px-6 py-3 rounded-2xl bg-linear-to-r from-purple-600 to-blue-600 text-white font-medium hover:shadow-lg hover:scale-[1.02] transition-all duration-200 shadow-md"
                 onClick={async () => {
                   try {
                     const token = localStorage.getItem("token");

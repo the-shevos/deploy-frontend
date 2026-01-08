@@ -169,7 +169,7 @@ export default function RegisterForm({ onSignInClick }: RegisterFormProps) {
 
       <h1 className="text-3xl font-extrabold mb-5 font-roboto -ml-3 text-center flex items-center justify-center gap-2">
         <span
-          className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
+          className="bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
           style={{ textShadow: "2px 2px 4px rgba(142, 36, 170, 0.2)" }}
         >
           Start Your New Account
@@ -251,7 +251,7 @@ export default function RegisterForm({ onSignInClick }: RegisterFormProps) {
           disabled={!isFormValid()}
           className={`w-full mt-3 py-2 rounded-lg font-semibold transition-colors ${
             isFormValid()
-              ? "bg-gradient-to-r cursor-pointer from-purple-600 to-blue-600 text-white hover:opacity-90"
+              ? "bg-linear-to-r cursor-pointer from-purple-600 to-blue-600 text-white hover:opacity-90"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >

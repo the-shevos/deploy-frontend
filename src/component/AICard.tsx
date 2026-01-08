@@ -97,7 +97,7 @@ export default function AIVirtualTryOnSection() {
         className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12"
         data-aos="zoom-in"
       >
-        <div className="relative bg-gradient-to-r from-[#230e42] to-[#3d1975] rounded-3xl p-10 md:p-16 flex flex-col lg:flex-row items-center gap-12 border border-black/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden z-10 w-full max-w-6xl mx-auto">
+        <div className="relative bg-linear-to-r from-[#230e42] to-[#3d1975] rounded-3xl p-10 md:p-16 flex flex-col lg:flex-row items-center gap-12 border border-black/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden z-10 w-full max-w-6xl mx-auto">
           <div
             ref={innerDotsContainer}
             className="absolute inset-0 z-0 w-full h-full"
@@ -124,7 +124,7 @@ export default function AIVirtualTryOnSection() {
             <Link
               to="/aiChat"
               onClick={handleTryNowClick}
-              className="cta-button inline-flex bg-gradient-to-b from-purple-500 to-indigo-700 text-white px-10 py-3 rounded-full text-lg shadow-xl mt-3 items-center gap-2 font-bold group transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_25px_rgba(0,0,0,0.3)] w-max"
+              className="cta-button inline-flex bg-linear-to-b from-purple-500 to-indigo-700 text-white px-10 py-3 rounded-full text-lg shadow-xl mt-3 items-center gap-2 font-bold group transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_25px_rgba(0,0,0,0.3)] w-max"
             >
               Try It Now
               <FontAwesomeIcon

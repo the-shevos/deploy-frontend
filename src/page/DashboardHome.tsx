@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { ResponsiveContainer } from "recharts";
 import axios from "axios";
 import {
@@ -227,7 +227,7 @@ const DashboardHome = () => {
 
         <div className="overflow-x-auto rounded-3xl shadow-lg border border-gray-300 bg-white">
           <table className="w-full min-w-[700px] text-sm text-left">
-            <thead className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-500 text-white rounded-t-3xl">
+            <thead className="bg-linear-to-r from-indigo-600 via-purple-600 to-indigo-500 text-white rounded-t-3xl">
               <tr className="uppercase tracking-wide text-xs">
                 <th className="py-3 px-6 font-medium text-center">Order</th>
                 <th className="py-3 px-6 font-medium text-center">User</th>
@@ -415,7 +415,7 @@ const DashboardHome = () => {
           </div>
         </div>
 
-        <div className="col-span-4 bg-gradient-to-br from-slate-800 via-slate-900 to-black rounded-3xl p-6 shadow-2xl border border-slate-700">
+        <div className="col-span-4 bg-linear-to-br from-slate-800 via-slate-900 to-black rounded-3xl p-6 shadow-2xl border border-slate-700">
           <h2 className="flex items-center justify-center gap-1 text-xl font-bold text-white mb-5 tracking-wide">
             <FontAwesomeIcon
               icon={faHeadset}
@@ -430,7 +430,7 @@ const DashboardHome = () => {
                 key={c._id}
                 className="group relative bg-white/95 backdrop-blur rounded-2xl p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/40 to-purple-200/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-indigo-200/40 to-purple-200/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 <div className="relative z-10 flex flex-col gap-1 text-center">
                   <h3 className="text-lg font-semibold text-indigo-700">

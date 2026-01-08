@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 const images = [
   "https://images.unsplash.com/photo-1550703712-7c448196fea6?q=80&w=687&auto=format&fit=crop",
@@ -72,7 +72,7 @@ export default function ImageSlider() {
             <img
               key={index}
               src={img}
-              className="w-full h-full object-cover flex-shrink-0"
+              className="w-full h-full object-cover shrink-0"
             />
           ))}
         </div>

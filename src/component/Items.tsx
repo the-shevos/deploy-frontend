@@ -100,8 +100,8 @@ export default function UltraPremiumShowcase() {
             <div
               className={`transition-all duration-500 rounded-full ${
                 i === currentIndex
-                  ? "h-12 w-[2px] bg-blue-500"
-                  : "h-4 w-[1px] bg-white/20 group-hover:bg-white/50"
+                  ? "h-12 w-2px bg-blue-500"
+                  : "h-4 w-1px bg-white/20 group-hover:bg-white/50"
               }`}
             />
             {i === currentIndex && (
@@ -220,7 +220,7 @@ export default function UltraPremiumShowcase() {
 
       <div className="absolute bottom-6 left-6 sm:left-12 flex items-center gap-3 text-[7px] sm:text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-white/20">
         <span>Scroll Forbidden</span>
-        <div className="w-16 sm:w-20 h-[1px] bg-white/10" />
+        <div className="w-16 sm:w-20 h-[px] bg-white/10" />
         <span>Luxury Experience</span>
       </div>
 

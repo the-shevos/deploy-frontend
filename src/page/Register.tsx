@@ -1,4 +1,3 @@
-import React from "react";
 import RegisterForm from "../component/RegisterForm";
 import ImageSlider from "../component/ImageSlider";
 
@@ -11,7 +10,7 @@ export default function RegisterPage() {
         </div>
 
         <div className="hidden md:flex items-center justify-center">
-          <div className="w-[2px] h-[70%] bg-purple-300/80"></div>
+          <div className="w-2px h-[70%] bg-purple-300/80"></div>
         </div>
 
         <div className="w-full md:w-1/2 p-4 md:p-8 flex justify-center">

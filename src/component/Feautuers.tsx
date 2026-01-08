@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStore,
@@ -92,7 +91,7 @@ const DotGrid = ({
 
 export default function FeaturesSection() {
   return (
-    <section className="px-4 py-15 -mt-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 relative">
+    <section className="px-4 py-15 -mt-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:py-20 relative">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-[#a572ed]">
           Latest Features
@@ -137,8 +136,8 @@ export default function FeaturesSection() {
         </p>
       </div>
 
-      <div className="relative grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0">
-        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 w-[1px] bg-purple-300 transform -translate-x-1/2"></div>
+      <div className="relative grid max-w-5xl mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 w-[px] bg-purple-300 transform -translate-x-1/2"></div>
 
         <div className="space-y-6 sm:px-16">
           {features.slice(0, 3).map((feature) => (
@@ -241,7 +240,7 @@ export default function FeaturesSection() {
     font-size: 1.4rem;
   }
 
-  .space-y-6.sm\:px-16 > div > div:last-child {
+  .space-y-6.sm:px-16 > div > div:last-child {
     flex: 5;
     max-width: 100%;
   }

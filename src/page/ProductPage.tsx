@@ -270,7 +270,7 @@ const ProductPage = () => {
         My Products
       </h1>
 
-      <div className="flex flex-wrap items-center ml-[80px] gap-4 mb-8">
+      <div className="flex flex-wrap items-center ml-80px gap-4 mb-8">
         <div className="flex flex-wrap gap-4">
           {(["all", "discounted", "inStock", "outOfStock"] as FilterType[]).map(
             (f) => (
@@ -282,7 +282,7 @@ const ProductPage = () => {
                 }}
                 className={`px-5 py-2 rounded-full cursor-pointer font-medium transition-all duration-200 ${
                   filter === f
-                    ? "bg-gradient-to-r from-purple-600 to-purple-500 text-white shadow-lg"
+                    ? "bg-linear-to-r from-purple-600 to-purple-500 text-white shadow-lg"
                     : "bg-gray-300/70 text-gray-700 hover:bg-gray-300"
                 }`}
               >
@@ -400,7 +400,7 @@ const ProductPage = () => {
 
       {modalOpen && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn">
-          <div className="bg-gradient-to-br from-white to-gray-100 rounded-3xl w-full max-w-lg p-6 relative shadow-2xl transform transition-all duration-300 scale-95 animate-scaleIn">
+          <div className="bg-linear-to-br from-white to-gray-100 rounded-3xl w-full max-w-lg p-6 relative shadow-2xl transform transition-all duration-300 scale-95 animate-scaleIn">
             <h2 className="text-3xl font-extrabold text-center text-blue-700 mb-5">
               {editingProductId ? "Edit Product" : "Add Product"}
             </h2>
@@ -500,7 +500,7 @@ const ProductPage = () => {
 
               <button
                 onClick={handleSubmit}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl hover:from-green-600 hover:to-green-700 transition transform hover:scale-105 font-semibold mt-4 shadow-lg"
+                className="bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl hover:from-green-600 hover:to-green-700 transition transform hover:scale-105 font-semibold mt-4 shadow-lg"
               >
                 {editingProductId ? "Update Product" : "Add Product"}
               </button>

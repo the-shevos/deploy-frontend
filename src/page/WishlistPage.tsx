@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { X, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -54,9 +54,9 @@ export default function WishlistPage() {
   }
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-br from-white via-purple-100 to-pink-100">
+    <div className="min-h-screen relative bg-linear-to-br from-white via-purple-100 to-pink-100">
       <div
-        className="inline-flex items-center gap-2 mt-4 ml-5 px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer mb-8"
+        className="inline-flex items-center gap-2 mt-4 ml-5 px-4 py-2 bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer mb-8"
         onClick={() => navigate("/")}
       >
         <Home size={22} />
@@ -108,7 +108,7 @@ export default function WishlistPage() {
                 {item.description}
               </p>
 
-              <div className="w-full h-1 mt-4 rounded-full bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400" />
+              <div className="w-full h-1 mt-4 rounded-full bg-linear-to-r from-purple-400 via-pink-400 to-yellow-400" />
             </div>
           ))}
         </div>

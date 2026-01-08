@@ -196,7 +196,7 @@ export default function FashionHeader({ defaultModal }: MainPageProps) {
         </button>
 
         {isMenuOpen && (
-          <div className="fixed inset-0 z-[100] flex lg:hidden">
+          <div className="fixed inset-0 z-100 flex lg:hidden">
             <div
               className="fixed inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsMenuOpen(false)}
@@ -319,7 +319,7 @@ export default function FashionHeader({ defaultModal }: MainPageProps) {
         )}
 
         {modal && (
-          <div className="fixed inset-0 z-[110] flex items-start sm:items-center justify-center p-4 sm:pt-0 pt-14 overflow-auto">
+          <div className="fixed inset-0 z-110 flex items-start sm:items-center justify-center p-4 sm:pt-0 pt-14 overflow-auto">
             <div
               className="fixed inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeModal}

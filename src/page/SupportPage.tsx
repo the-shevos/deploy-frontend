@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -88,7 +88,7 @@ const Support = () => {
             key={card._id}
             className="bg-white rounded-3xl border border-purple-200 shadow-lg hover:shadow-2xl transition-all w-80 flex flex-col text-center transform hover:-translate-y-1"
           >
-            <div className="p-8 flex flex-col flex-grow">
+            <div className="p-8 flex flex-col grow">
               <h2 className="text-2xl font-semibold text-purple-700 mb-2">
                 {card.name}
               </h2>

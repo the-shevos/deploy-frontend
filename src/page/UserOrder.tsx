@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
@@ -85,7 +85,7 @@ export default function OrderPage() {
 
   if (orderConfirmed) {
     return (
-      <div className="min-h-screen relative bg-gradient-to-br from-white via-purple-50 to-pink-100 flex items-center justify-center px-4">
+      <div className="min-h-screen relative bg-linear-to-br from-white via-purple-50 to-pink-100 flex items-center justify-center px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -93,7 +93,7 @@ export default function OrderPage() {
           className="max-w-3xl w-full"
         >
           <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/50">
-            <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-1">
+            <div className="bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 p-1">
               <div className="bg-white/90 backdrop-blur-lg rounded-t-3xl px-12 pt-16 pb-12 text-center">
                 <motion.div
                   initial={{ scale: 0 }}
@@ -102,7 +102,7 @@ export default function OrderPage() {
                   className="inline-flex"
                 >
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-pink-400 blur-3xl opacity-60 scale-150 animate-pulse"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-indigo-400 to-pink-400 blur-3xl opacity-60 scale-150 animate-pulse"></div>
                     <CheckCircle
                       size={100}
                       className="relative text-indigo-600 z-10"
@@ -115,7 +115,7 @@ export default function OrderPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mt-8"
+                  className="text-5xl font-bold bg-linear-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mt-8"
                 >
                   Thank You, {user.username || "Friend"}!
                 </motion.h1>
@@ -142,7 +142,7 @@ export default function OrderPage() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 border border-indigo-100">
+                <div className="bg-linear-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 border border-indigo-100">
                   <div className="flex items-center gap-3 mb-3">
                     <Package className="text-indigo-600" />
                     <h3 className="font-semibold text-lg">
@@ -170,7 +170,7 @@ export default function OrderPage() {
                   ))}
                 </div>
 
-                <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-100">
+                <div className="bg-linear-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-100">
                   <div className="flex items-center gap-3 mb-3">
                     <Truck className="text-pink-600" />
                     <h3 className="font-semibold text-lg">Delivers by</h3>
@@ -187,10 +187,10 @@ export default function OrderPage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-600 to-pink-600 p-1 rounded-2xl">
+              <div className="bg-linear-to-r from-indigo-600 to-pink-600 p-1 rounded-2xl">
                 <div className="bg-white rounded-2xl p-8 text-center">
                   <p className="text-gray-600 mb-2">Total Paid</p>
-                  <p className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+                  <p className="text-5xl font-bold bg-linear-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
                     ${total.toFixed(2)}
                   </p>
                   {delivery === 0 && (
@@ -223,7 +223,7 @@ export default function OrderPage() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: [0.3, 1, 0.3], y: -100 }}
               transition={{ duration: 3, repeat: Infinity, delay: i * 0.4 }}
-              className="absolute w-3 h-3 bg-gradient-to-r from-indigo-400 to-pink-400 rounded-full blur-sm"
+              className="absolute w-3 h-3 bg-linear-to-r from-indigo-400 to-pink-400 rounded-full blur-sm"
               style={{ left: `${20 + i * 15}%`, top: "10%" }}
             />
           ))}
@@ -233,7 +233,7 @@ export default function OrderPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-purple-50 via-pink-50 to-yellow-50">
+    <div className="min-h-screen bg-linear-to-tr from-purple-50 via-pink-50 to-yellow-50">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -247,11 +247,11 @@ export default function OrderPage() {
             >
               <div className="flex flex-col md:flex-col sm:flex-row items-center justify-between gap-4 mb-8">
                 <div className="flex items-center gap-4">
-                  <div className="icon-hide-mobile p-3 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl text-white">
+                  <div className="icon-hide-mobile p-3 bg-linear-to-br from-indigo-500 to-purple-600 rounded-2xl text-white">
                     <Sparkles size={28} />
                   </div>
                   <div>
-                    <h1 className=" checkout-title text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    <h1 className=" checkout-title text-4xl font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                       Complete Your Order
                     </h1>
                     <p className="checkout-title text-gray-600 mt-1">
@@ -391,7 +391,7 @@ export default function OrderPage() {
               animate={{ opacity: 1, x: 0 }}
             >
               <div className="bg-white/70 backdrop-blur-2xl rounded-3xl shadow-2xl border border-white/60 overflow-hidden">
-                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white">
+                <div className="bg-linear-to-r from-indigo-600 to-purple-600 p-6 text-white">
                   <h3 className="text-2xl font-bold">Order Summary</h3>
                   <p className="text-white/80 mt-1">{items.length} items</p>
                 </div>
@@ -463,7 +463,7 @@ export default function OrderPage() {
                         <span className="text-2xl font-bold text-gray-800">
                           Total
                         </span>
-                        <span className="text-4xl summary-total font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        <span className="text-4xl summary-total font-bold bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                           ${total.toFixed(2)}
                         </span>
                       </div>
@@ -475,7 +475,7 @@ export default function OrderPage() {
                     whileTap={{ scale: 0.98 }}
                     onClick={() => setShowPaymentModal(true)}
                     disabled={!address || !phone || items.length === 0}
-                    className="w-full order-button-complete py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                    className="w-full order-button-complete py-4 bg-linear-to-r from-indigo-600 to-purple-600 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                   >
                     <div className="icon-hide-mobile">
                       <CreditCard size={28} />
@@ -507,7 +507,7 @@ export default function OrderPage() {
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
             className="relative bg-white/95 backdrop-blur-xl rounded-[2.5rem] shadow-[0_32px_64px_-15px_rgba(0,0,0,0.2)] border border-white/60 w-full max-w-xl overflow-hidden"
           >
-            <div className="h-2 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+            <div className="h-2 w-full bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500" />
 
             <button
               onClick={() => setShowPaymentModal(false)}

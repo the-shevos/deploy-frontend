@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Home, ShoppingCart, Heart, Star, X, Trash } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -166,10 +166,10 @@ export default function ProductPage() {
   };
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-br from-white via-purple-50 to-pink-100">
+    <div className="min-h-screen relative bg-linear-to-br from-white via-purple-50 to-pink-100">
       <div className=" px-3 sm:px-6">
         <div
-          className="inline-flex mt-5 items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer mb-6"
+          className="inline-flex mt-5 items-center gap-2 px-4 py-2 bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer mb-6"
           onClick={() => navigate("/")}
         >
           <Home size={24} className="text-white" />
@@ -245,7 +245,7 @@ export default function ProductPage() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium shadow-lg transition-all duration-300 transform hover:translate-y-1 ${
                   selectedCategory === cat
-                    ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white"
+                    ? "bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white"
                     : "bg-white border border-gray-200 text-gray-700 hover:shadow-xl"
                 }`}
               >
@@ -347,7 +347,7 @@ export default function ProductPage() {
         </div>
 
         {isCartOpen && (
-          <div className="fixed inset-0 z-[999] flex justify-end">
+          <div className="fixed inset-0 z-999 flex justify-end">
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
               onClick={() => setIsCartOpen(false)}
@@ -430,7 +430,7 @@ export default function ProductPage() {
 
                 <button
                   onClick={() => navigate("/userOrder")}
-                  className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold py-3 sm:py-4 rounded-2xl shadow-xl hover:scale-105 transform transition duration-300"
+                  className="w-full flex justify-center items-center gap-2 bg-linear-to-r from-purple-500 to-indigo-500 text-white font-bold py-3 sm:py-4 rounded-2xl shadow-xl hover:scale-105 transform transition duration-300"
                 >
                   Checkout
                   <svg
@@ -565,7 +565,7 @@ export default function ProductPage() {
 
                 <button
                   onClick={() => addToCart(selectedProduct, quantity)}
-                  className="mt-3 sm:mt-4 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 sm:py-3 rounded-xl font-semibold hover:scale-105 transition transform"
+                  className="mt-3 sm:mt-4 w-full bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 sm:py-3 rounded-xl font-semibold hover:scale-105 transition transform"
                   disabled={getAvailableStock(selectedProduct) <= 0}
                 >
                   <ShoppingCart size={16} className="inline mr-2" /> Add to Cart
